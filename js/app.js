@@ -57,14 +57,7 @@ function setBgGreet() {
   }
 }
 
-// Get Name
-function getName() {
-  if (localStorage.getItem('name') === null) {
-    name.textContent = '[Enter Name]';
-  } else {
-    name.textContent = localStorage.getItem('name');
-  }
-}
+
 
 // Set Name
 function setName(e) {
@@ -79,27 +72,6 @@ function setName(e) {
   }
 }
 
-// // Get Focus
-// function getFocus() {
-//   if (localStorage.getItem('focus') === null) {
-//     focus.textContent = '[Enter Focus]';
-//   } else {
-//     focus.textContent = localStorage.getItem('focus');
-//   }
-// }
-
-// // Set Focus
-// function setFocus(e) {
-//   if (e.type === 'keypress') {
-//     // Make sure enter is pressed
-//     if (e.which == 13 || e.keyCode == 13) {
-//       localStorage.setItem('focus', e.target.innerText);
-//       focus.blur();
-//     }
-//   } else {
-//     localStorage.setItem('focus', e.target.innerText);
-//   }
-// }
 
 name.addEventListener('keypress', setName);
 name.addEventListener('blur', setName);
